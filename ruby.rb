@@ -5,7 +5,7 @@ def substring(string, dictionary)
     array = string.downcase.split(" ")
     
     dictionary.each do |count_key|
-        counts[count_key] = 0
+       counts[count_key] = 0
     end
     
     array.each do |word|
@@ -15,10 +15,10 @@ def substring(string, dictionary)
             end
         end
     end
-    puts counts
+    puts counts.select {|key, value| value > 0}
 end
 
-substring("below", dictionary)
+substring("Howdy partner, sit down! How's it going?", dictionary)
 
 
 
